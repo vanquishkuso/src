@@ -84,6 +84,12 @@ $("document").ready(function () {
   function addCourses() {
     $.get("http://webbred2.utb.hb.se/~fewe/api/api.php?data=courses", courseData => {
       $.each(courseData, function (index, courses) {
+        var coursesLink = courses.courseName.toLowerCase().replace(/\s/g, '');
+        console.log(coursesLink)
+
+        $(".menu-item").eq(index).attr("href", coursesLink + ".html")
+        $(".menu-item").eq(index).html(courses.courseName);
+
         $("tbody").append(
           "<tr><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.school + "</a></td><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.courseId + "</a></td><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.courseName + "</a></td><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.credit + "</a></td><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.startWeek + "</a></td><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.endWeek + "</a></td></tr>"
         );
@@ -106,7 +112,7 @@ $("document").ready(function () {
 
         $(".quizdiv").append(
           $(
-            "<button type='button' class='btn btn-primary btn-lg mx-1 my-1 qbtn btn-correct'>" + quiz.correct_answer + "</button>"
+            "<button type='button' class='btn btn-primary btn-lg mx-1 my-1 btn-correct" + index + " qbtn" + index + "'>" + quiz.correct_answer + "</button>"
           ).click(function () {
             correctPoint++;
           })
@@ -114,7 +120,7 @@ $("document").ready(function () {
 
         $(".quizdiv").append(
           $(
-            "<button type='button' class='btn btn-primary btn-lg mx-1 my-1'>" + quiz.incorrect_answers[0] + "</button>"
+            "<button type='button' class='btn btn-primary btn-lg mx-1 my-1 btn-wrong" + index + " qbtn" + index + "'>" + quiz.incorrect_answers[0] + "</button>"
           ).click(function () {
             wrongPoint++;
           })
@@ -123,7 +129,7 @@ $("document").ready(function () {
         if (quiz.incorrect_answers.length >= 2) {
           $(".quizdiv").append(
             $(
-              "<button type='button' class='btn btn-primary btn-lg mx-1 my-1 qbtn'>" + quiz.incorrect_answers[1] + "</button>"
+              "<button type='button' class='btn btn-primary btn-lg mx-1 my-1 btn-wrong" + index + " qbtn" + index + "'>" + quiz.incorrect_answers[1] + "</button>"
             ).click(function () {
 
               wrongPoint++;
@@ -134,23 +140,25 @@ $("document").ready(function () {
         if (quiz.incorrect_answers.length >= 3) {
           $(".quizdiv").append(
             $(
-              "<button type='button' class='btn btn-primary btn-lg mx-1 my-1'>" + quiz.incorrect_answers[2] + "</button>"
+              "<button type='button' class='btn btn-primary btn-lg mx-1 my-1 btn-wrong" + index + " qbtn" + index + "'>" + quiz.incorrect_answers[2] + "</button>"
             ).click(function () {
               wrongPoint++;
             })
           );
         }
+        $(".quizdiv .qbtn" + index).click(function () {
+          $(this).addClass("btn-danger");
+          $(".btn-correct" + index).removeClass("btn-danger").addClass("btn-success");
+          $(".qbtn" + index).prop("disabled", true)
+
+        });
       })
     });
   }
   addQuiz();
 
-  function showCorrectAnswers() {
-    $(".quizdiv").click(function () {
-      $(".btn-correct:eq(0)").addClass("btn-success")
-      $("button").prop("disabled", true)
-    });
-  }
-  showCorrectAnswers()
+  //     $(".btn-correct:eq(0)").addClass("btn-success")
+  //     $("button").prop("disabled", true)
+
 });
 
