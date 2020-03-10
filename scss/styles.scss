@@ -1,0 +1,38 @@
+// Skriv över variabler
+$theme-colors: (
+    "primary": #458ed3
+);
+
+$body-bg: #fafafa;
+
+
+.jumbotron {
+    background-color: #ffffff;
+    border-top: 3px solid #cfcfcf;
+    background-image: url("/img/schoolcomputer.jpg");
+    background-size: cover;
+}
+
+.blur {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -o-filter: blur(8px);
+    -ms-filter: blur(8px);
+}
+
+.jumbotext {
+    border-radius: 3px;
+}
+
+  
+// Hämta Bootstrap Sass filer
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/grid";
