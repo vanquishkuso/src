@@ -84,8 +84,8 @@ $("document").ready(function () {
   function addCourses() {
     $.get("http://webbred2.utb.hb.se/~fewe/api/api.php?data=courses", courseData => {
       $.each(courseData, function (index, courses) {
-        var findSite = $("body").find("")
         var checkSite = $(".display-4:contains(" + courses.courseName + ")");
+        var checkSiteId = $("." + courses.courseId);
         var coursesLink = courses.courseName.toLowerCase().replace(/\s/g, '');
         $(".menu-item").eq(index).attr("href", coursesLink + ".html").html(courses.courseName);
 
@@ -93,20 +93,15 @@ $("document").ready(function () {
           "<tr><td><a class='course-link' href='" + coursesLink + ".html'>" + courses.school + "</a></td><td><a class='course-link' href='" + coursesLink + ".html'>" + courses.courseId + "</a></td><td><a class='course-link' href='" + coursesLink + ".html'>" + courses.courseName + "</a></td><td><a class='course-link' href='" + coursesLink + ".html'>" + courses.credit + "</a></td><td><a class='course-link' href='" + coursesLink + ".html'>" + courses.startWeek + "</a></td><td><a class='course-link' href='" + coursesLink + ".html'>" + courses.endWeek + "</a></td></tr>"
         );
 
-        $("h1").addClass(function () {
-          return "course-" + index;
-          })
-          $("course-" + index).append("<h5 class='card-title d-inline'>Skola </h5><p //class='card-text d-inline font-weight-bold'> " + courses.school + "</p><br>")
-          
-//        $(".start-h" + index).append("<h5 class='card-title d-inline'>Skola </h5><p //class='card-text d-inline font-weight-bold'> " + courses.school + "</p><br>")
-//        $(".start-h" + index).append("<h5 class='card-title d-inline'>Poäng </h5><p //class='card-text d-inline font-weight-bold'> " + courses.credit + "</p><br>")
-//        $(".start-h" + index).append("<h5 class='card-title d-inline'>Startar vecka </h5><p //class='card-text d-inline font-weight-bold'> " + courses.startWeek + "</p><br>")
-//        $(".start-h" + index).append("<h5 class='card-title d-inline'>Slutar vecka </h5><p //class='card-text d-inline font-weight-bold'> " + courses.endWeek + "</p><br>")
-//        $(".start-h" + index).append("<h5 class='card-title d-inline'>Lärare </h5><p //class='card-text d-inline font-weight-bold'> " + courses.teachers + "</p><br>")
+        $(".start-h" + index).append("<h5 class='card-title d-inline'>Skola </h5><p class='card-text d-inline font-weight-bold'> " + courses.school + "</p><br>")
+        $(".start-h" + index).append("<h5 class='card-title d-inline'>Poäng </h5><p class='card-text d-inline font-weight-bold'> " + courses.credit + "</p><br>")
+        $(".start-h" + index).append("<h5 class='card-title d-inline'>Startar vecka </h5><p class='card-text d-inline font-weight-bold'> " + courses.startWeek + "</p><br>")
+        $(".start-h" + index).append("<h5 class='card-title d-inline'>Slutar vecka </h5><p class='card-text d-inline font-weight-bold'> " + courses.endWeek + "</p><br>")
+        $(".start-h" + index).append("<h5 class='card-title d-inline'>Lärare </h5><p class='card-text d-inline font-weight-bold'> " + courses.teachers + "</p><br>")
 
       });
 
-  });
+    });
   }
   addCourses();
 
