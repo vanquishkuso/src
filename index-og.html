@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<!--Head settings-->
+
+<head>
+    <title>Högskolans Lärplattform - Kursinformation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--Site wrapper for CSS purposes-->
+    <div class="site-wrapper">
+
+        <div class="header-wrapper">
+            <header class="site-header">
+                <a href="courseinfo.html">Otaku Lärplattform</a>
+            </header>
+        </div>
+
+        <!--Navigation-->
+        <nav>
+            <ul>
+                <li><a href="courseinfo.html">Kursinformation</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+
+        <!--Login start-->
+        <div id="login-wrapper">
+            <!--Login box wrapper-->
+            <div id="login-box">
+                <p>Logga in här</p>
+                <!--Form for the login, two input boxes and one submit button. With the help of ID the JS script will get the value from the input-->
+                <form id="form-login" accept-charset="utf-8">
+                    <label for="username">Användarnamn</label><br>
+                    <input type="text" id="username" name="username"><br><br>
+                    <label for="password">Lösenord</label><br>
+                    <input type="password" id="password" name="password"><br><br>
+                    <input type="button" value="Logga in" id="submit-button">
+                </form>
+            </div>
+        </div>
+
+        <footer>En webbsida av Tobias Johansson</footer>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </div>
+</body>
+
+</html>

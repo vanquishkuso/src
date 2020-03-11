@@ -4,6 +4,12 @@
   background-image: url("/img/schoolcomputer.jpg");
   background-size: cover; }
 
+.course-celtic {
+  background-image: url("/img/celticstudies.jpg"); }
+
+.course-celtic .jumbotext {
+  background-color: rgba(255, 255, 255, 0.603); }
+
 .course-criminology {
   background-color: #ffffff00;
   background-image: url("/img/crime.jpg");
