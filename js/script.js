@@ -85,10 +85,7 @@ $("document").ready(function () {
     $.get("http://webbred2.utb.hb.se/~fewe/api/api.php?data=courses", courseData => {
       $.each(courseData, function (index, courses) {
         var coursesLink = courses.courseName.toLowerCase().replace(/\s/g, '');
-        console.log(coursesLink)
-
-        $(".menu-item").eq(index).attr("href", coursesLink + ".html")
-        $(".menu-item").eq(index).html(courses.courseName);
+        $(".menu-item").eq(index).attr("href", coursesLink + ".html").html(courses.courseName);
 
         $("tbody").append(
           "<tr><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.school + "</a></td><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.courseId + "</a></td><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.courseName + "</a></td><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.credit + "</a></td><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.startWeek + "</a></td><td><a class='course-link' href='" + courses.courseName + ".html'>" + courses.endWeek + "</a></td></tr>"
@@ -150,14 +147,12 @@ $("document").ready(function () {
           $(this).addClass("btn-danger");
           $(".btn-correct" + index).removeClass("btn-danger").addClass("btn-success");
           $(".qbtn" + index).prop("disabled", true)
-
         });
-        
-     //   $(".quizdiv .qbtn" + index).html($(".qbtn").sort(function () {
-     //       return Math.random() - 0.5;
-     //     }))
-        
-      
+
+        //   $(".quizdiv .qbtn" + index).html($(".qbtn").sort(function () {
+        //       return Math.random() - 0.5;
+        //     }))
+
       })
     });
   }
