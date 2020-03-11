@@ -1,8 +1,41 @@
 .jumbotron {
-  background-color: #ffffff;
+  background-color: #ffffff00;
   border-top: 3px solid #cfcfcf;
   background-image: url("/img/schoolcomputer.jpg");
   background-size: cover; }
+
+.course-criminology {
+  background-color: #ffffff00;
+  background-image: url("/img/crime.jpg");
+  background-size: cover; }
+
+.course-cm {
+  background-color: #ffffff00;
+  background-image: url("/img/contentmanagement.jpg");
+  background-size: cover; }
+
+.course-criminology .jumbotext {
+  background-color: rgba(46, 46, 46, 0.733);
+  color: #fff; }
+
+.course-cm .jumbotext {
+  background-color: rgba(46, 46, 46, 0.733);
+  color: #fff; }
+
+.course-cm {
+  position: relative !important;
+  overflow: hidden important; }
+
+video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  height: auto; }
 
 .blur {
   filter: blur(8px);
@@ -13,6 +46,10 @@
 
 .jumbotext {
   border-radius: 3px; }
+
+img {
+  width: 40% !important;
+  height: auto; }
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
