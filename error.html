@@ -3,6 +3,7 @@
 
 <head>
     <title>Otaku Lärplattform</title>
+    <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -14,9 +15,10 @@
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="index.html">Otaku Lärplattform</a>
-
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary" role="navigation">
+            <header role="banner">
+                <a class="navbar-brand" href="login.html">Otaku Lärplattform</a></header>
+            <!--
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,87 +33,57 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item menu-item" href="#">Kurs 1</a>
                             <a class="dropdown-item menu-item" href="#">Kurs 2</a>
-                            <a class="dropdown-item menu-item disabled" href="#">Kurs 3</a>
+                            <a class="dropdown-item menu-item" href="#">Kurs 3</a>
                             <a class="dropdown-item menu-item" href="#">Kurs 4</a>
-                            <a class="dropdown-item menu-item disabled" href="#">Kurs 5</a>
-                            <a class="dropdown-item menu-item disabled" href="#">Kurs 6</a>
-                            <a class="dropdown-item menu-item disabled" href="#">Kurs 6</a>
+                            <a class="dropdown-item menu-item" href="#">Kurs 5</a>
+                            <a class="dropdown-item menu-item" href="#">Kurs 6</a>
+                            <a class="dropdown-item menu-item" href="#">Kurs 7</a>
+                            <a class="dropdown-item menu-item" href="#">Kurs 8</a>
+
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="quiz.html">Quiz</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teachers.html">Lärare</a>
+                    </li>
                 </ul>
             </div>
+            -->
         </nav>
 
-
-        <div class="jumbotron">
-
-            <div class="bg-light p-3 jumbotext">
-                <h1 class="display-4">Kursinformation</h1>
-                <p class="lead">Våra kurser uppdateras kontinuerligt</p>
+        <div class="row">
+            <div class="col-sm-12 md-12 text-center">
+                <h2 class="my-5">Hoppsan</h2>
+                <p>Du har försökt nå en sida utan att logga in. Du kommer bli vidarebefordrad till inloggningssidan inom
+                    5 sekunder</p>
+                <button class="btn btn-primary my-5">Jag vill inte vänta</button>
             </div>
         </div>
-
-        <main>
-            <div class="row mt-sm-4 mt-md-0">
-                <div class="col-sm-12 col-md-12 text-sm-center text-md-left">
-                    <table class="table table-condensed table-hover table-striped">
-                        <thead>
-                            <tr>
-                                <th>Skola</th>
-                                <th>Kurs-ID</th>
-                                <th>Kursnamn</th>
-                                <th>Poäng</th>
-                                <th>Startar vecka</th>
-                                <th>Slutar vecka</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </main>
 
         <footer class="page-footer font-small bg-primary text-light pt-4" role="contentinfo">
             <div class="container-fluid text-center text-md-left">
                 <div class="row">
                     <div class="col-md-6 mt-md-0 mt-3">
                         <h5 class="text-uppercase font-weight-bold">Otaku Lärplattform</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores ut quisquam esse,
-                            iste non commodi sapiente consequatur</p>
+                        <address>Nördstigen 2A, 888 66 Universitetshålan</address>
                     </div>
                     <hr class="clearfix w-100 d-md-none pb-3">
 
-                    <div class="col-md-6 mb-md-0 mb-3">
-
-                        <h5 class="text-uppercase font-weight-bold">Länkar</h5>
-
-                        <ul class="list-unstyled">
-                            <li>
-                                <a class="text-light" href="courses.html">Kursinformation</a>
-                            </li>
-                            <li>
-                                <a class="text-light" href="quiz.html">Quiz</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
 
-            <div class="footer-copyright text-center py-3">© 2020 Copyright Grupp D7: Tobias, Karin, Amanda</div>
+            <div class="footer-copyright py-3 px-3 small">© 2020 Copyright Grupp D7: Tobias, Karin, Amanda</div>
         </footer>
 
     </div>
-
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
         integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
         crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="js/error.js"></script>
 </body>
 
 </html>

@@ -1,80 +1,83 @@
 // Skriv över variabler
 $theme-colors: (
-    "primary": #458ed3
+  "primary": #458ed3
 );
 
 $body-bg: #f5f5f5;
 
-
 .jumbotron {
-    background-color: #ffffff00;
-    border-top: 3px solid #cfcfcf;
-    background-image: url("/img/schoolcomputer.jpg");
-    background-size: cover;
+  background-color: #ffffff00;
+  border-top: 3px solid #cfcfcf;
+  background-image: url("/img/schoolcomputer.jpg");
+  background-size: cover;
 }
 
 .course-celtic {
-    background-image: url("/img/celticstudies.jpg");
+  background-image: url("/img/celticstudies.jpg");
 }
 
 .course-celtic .jumbotext {
-    background-color: rgba(255, 255, 255, 0.603);
+  background-color: rgba(255, 255, 255, 0.603);
 }
 
 .course-criminology {
-    background-color: #ffffff00;
-    background-image: url("/img/crime.jpg");
-    background-size: cover;
+  background-color: #ffffff00;
+  background-image: url("/img/crime.jpg");
+  background-size: cover;
 }
 
 .course-cm {
-    background-color: #ffffff00;
-    background-image: url("/img/contentmanagement.jpg");
-    background-size: cover;
+  background-color: #ffffff00;
+  background-image: url("/img/contentmanagement.jpg");
+  background-size: cover;
 }
 .course-criminology .jumbotext {
-    background-color: rgba(46, 46, 46, 0.733);
-    color: #fff;
+  background-color: rgba(46, 46, 46, 0.733);
+  color: #fff;
 }
 
 .course-cm .jumbotext {
-    background-color: rgba(46, 46, 46, 0.733);
-    color: #fff;
+  background-color: rgba(46, 46, 46, 0.733);
+  color: #fff;
 }
 
 .course-cm {
-    position: relative !important;
-    overflow: hidden important;
+  position: relative !important;
+  overflow: hidden important;
 }
 
 video {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: 1;
-    width: 100%;
-    height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  height: auto;
 }
 
 .blur {
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    -moz-filter: blur(8px);
-    -o-filter: blur(8px);
-    -ms-filter: blur(8px);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 .jumbotext {
-    border-radius: 3px;
+  border-radius: 3px;
 }
-  
+
+footer {
+  max-width: 100% !important;
+}
+
 // Hämta Bootstrap Sass filer
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/bootstrap/scss/functions";

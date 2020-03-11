@@ -17,8 +17,8 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary" role="navigation">
             <header role="banner">
-                <a class="navbar-brand" href="index.html">Otaku Lärplattform</a></header>
-
+                <a class="navbar-brand" href="login.html">Otaku Lärplattform</a></header>
+            <!--
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,51 +50,36 @@
                     </li>
                 </ul>
             </div>
+            -->
         </nav>
 
         <div class="row">
-            <div class="col-sm-12 md-12 text-center"></div>
-            <form id="form-login" accept-charset="utf-8">
-                <div class="form-group">
+            <div class="col-sm-12 md-12 text-center">
+                <form id="form-login" accept-charset="utf-8" class="my-5">
+                    <h5 class="my-4">Logga in</h5>
                     <label for="username">Användarnamn</label><br>
                     <input type="text" id="username" name="username"><br><br>
                     <label for="password">Lösenord</label><br>
                     <input type="password" id="password" name="password"><br><br>
-                    <input type="button" value="Logga in" id="submit-button">
-                </div>
-            </form>
+                    <input type="button" class="btn btn-primary mb-5" value="Logga in" id="submit-button">
+                </form>
+            </div>
         </div>
+
 
         <footer class="page-footer font-small bg-primary text-light pt-4" role="contentinfo">
             <div class="container-fluid text-center text-md-left">
                 <div class="row">
                     <div class="col-md-6 mt-md-0 mt-3">
                         <h5 class="text-uppercase font-weight-bold">Otaku Lärplattform</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores ut quisquam esse,
-                            iste non commodi sapiente consequatur</p>
+                        <address>Nördstigen 2A, 888 66 Universitetshålan</address>
                     </div>
                     <hr class="clearfix w-100 d-md-none pb-3">
 
-                    <div class="col-md-6 mb-md-0 mb-3">
-
-                        <h5 class="text-uppercase font-weight-bold">Länkar</h5>
-
-                        <ul class="list-unstyled">
-                            <li>
-                                <a class="text-light" href="courses.html">Kursinformation</a>
-                            </li>
-                            <li>
-                                <a class="text-light" href="quiz.html">Quiz</a>
-                            </li>
-                            <li>
-                                <a class="text-light" href="teachers.html">Lärare</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
 
-            <div class="footer-copyright text-center py-3">© 2020 Copyright Grupp D7: Tobias, Karin, Amanda</div>
+            <div class="footer-copyright py-3 px-3 small">© 2020 Copyright Grupp D7: Tobias, Karin, Amanda</div>
         </footer>
 
     </div>
@@ -103,7 +88,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
         integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
         crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
