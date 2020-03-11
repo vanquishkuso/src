@@ -152,13 +152,20 @@ $("document").ready(function () {
           $(".qbtn" + index).prop("disabled", true)
 
         });
+        
+     //   $(".quizdiv .qbtn" + index).html($(".qbtn").sort(function () {
+     //       return Math.random() - 0.5;
+     //     }))
+        
+      
       })
     });
   }
   addQuiz();
 
+
   //     $(".btn-correct:eq(0)").addClass("btn-success")
   //     $("button").prop("disabled", true)
-  
+
 });
 
