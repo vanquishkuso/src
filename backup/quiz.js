@@ -1,6 +1,7 @@
 $("document").ready(function () {
+    // Add log out button
     $(".user").append("<button id='log-out'>Logga ut</button>");
-    $("#log-out").click(function (){
+    $("#log-out").click(function () {
         sessionStorage.clear();
         window.location.href = "index.html";
     });
@@ -15,7 +16,7 @@ $("document").ready(function () {
         ) {
             function checkSession() {
                 if (sessionStorage.getItem('username') == null) {
-                    
+
                     window.location.href = "error.html";
                 }
             }
@@ -176,7 +177,7 @@ $("document").ready(function () {
             });
         });
     }
-   // quiz(); // Run the function when site loads.
+    // quiz(); // Run the function when site loads.
 
     // Hide the show score text when the site loads.
     $(".show-score").hide();
